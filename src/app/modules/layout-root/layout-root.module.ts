@@ -10,24 +10,27 @@ import {PaymentCardComponent} from './components/payment-card/payment-card.compo
 import {ControlHeadComponent} from './components/control-head/control-head.component';
 import {RouterModule} from "@angular/router";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {UiModule} from "@modules/ui/ui.module";
+import {UiModule} from "@ui/ui.module";
 
+const  COMPONENTS =[
+  HeaderComponent,
+  AsideMenuComponent,
+  LayoutRootComponent,
+  PaymentAsideComponent,
+  MainContentComponent,
+  PaymentCardComponent,
+  ControlHeadComponent
+];
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    AsideMenuComponent,
-    LayoutRootComponent,
-    PaymentAsideComponent,
-    MainContentComponent,
-    PaymentCardComponent,
-    ControlHeadComponent
+    ...COMPONENTS
   ],
   imports: [
     CommonModule,
     RouterModule,
     FlexLayoutModule,
-    UiModule,
+    UiModule
   ]
 })
 export class LayoutRootModule {

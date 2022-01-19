@@ -12,5 +12,4 @@ export class LayoutRootComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -8,35 +8,7 @@
   //* root themes
   @include generate-themes($themes-map);
 
-  @include use-theme-name(github) {
-    --asides-bg: #4e8ee2ad;
-    //--asides-filter-invert: #{invert(0.4)};
-    --console-prefix-color: #4e8ee2ad;
-  }
-
-  @include use-theme-name(dark) {
-    --asides-filter-invert: #{ brightness(0.5)};
-    --asides-bg: #fe3bb191;
-    --console-prefix-color: #cfcfcfc9;
-    --cl-dark-01: #{rgba(#ffffff, 0.5)};
-    //--pic-shadow-down-color: ;
-    //  --pic-shadow-down-color-2: ;
-    --console-btn-bg: #{$success};
-
-    --pic-shadow-cl: #fe3bb1;
-    --pic-shadow-cl-2: #af287a;
-    --pic-shadow-cl-3: #ff5c49;
-    //--pic-shadow-cl-4: ;
-    //--pic-shadow-cl-5: ;
-
-    --console-border: #{rem(1) solid  rgba(#fff, 0.03) };
-
-    --main-bg: linear-gradient(27deg, black 29%, #fe3bb1 140%);
-  }
-
-  @include use-theme-name(ocean) {
-    --asides-filter-invert: #{ brightness(0.8)};
-  }
+  //@include use-theme-name() {}
 
   //* root medias
 }

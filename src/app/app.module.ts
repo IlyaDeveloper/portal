@@ -5,7 +5,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoutingModule} from './app-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {NativeRefService} from "./core/refs/native-ref.service";
+import {NativeRefService} from "@core/refs/native-ref.service";
+import {UiModule} from "@ui/ui.module";
+import {LayoutRootModule} from "@modules/layout-root/layout-root.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import {NativeRefService} from "./core/refs/native-ref.service";
     ReactiveFormsModule,
     FlexLayoutModule,
     AppRoutingModule,
+    LayoutRootModule,
+    UiModule
   ],
   providers: [
     NativeRefService

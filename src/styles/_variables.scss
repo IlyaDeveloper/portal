@@ -17,102 +17,64 @@ $wideScreens: (
   retina8k: 7600px
 );
 
+
+$contentScale: (
+  //(
+  //    direction: 'max-width',
+  //    wide: screens(phonesSm),
+  //    scale: 92%
+  //),
+);
+
+$customContainer: true;
+$containerLimit: rem(screens(desktopMd)) + rem(32);
+$containerOffset: calc(var(--container-gutter) * -1);
 $contentGutter: rem(16) !default;
 $contentGutterX2: rem(24) !default;
 $contentGutterX3: rem(48) !default;
-$contentGutterX4: rem(96) !default;
+$sectionSpacer: var(--section-spacer, rem(70)) !default;
+
+$contentSizeExtraSmall: rem(472) !default;
+$contentSizeSmall: rem(568) !default;
+
+$multiplier: 1.25 !default;
+
+$elemRadius: rem(6) !default;
+$elemRadiusNormal: rem(10) !default;
+$elemRadiusSmall: rem(4) !default;
 
 $themes-map: (
   default:(
-    primary: #ff5656,
-    primary-dark: #9D2323,
-    secondary: #00FFBC,
-    secondary-dark: #03b387,
-    tertiary: #f6d633,
-    light: #ffffff,
+    primary: #262626,
+    primary-light: #747474,
+    primary-lighten: #939393,
+    secondary: #DA5726,
+    secondary-dark: #a73605,
+    tertiary: #8F9196,
+    tertiary-light: #E4E6EA,
+    light: #F5F5F5,
     dark: #000000,
-    dark-06: #{rgba(#000000, .6)},
-    dark-04: #{rgba(#000000, .4)},
-    dark-01: #{rgba(#000000, .1)},
-    base: #ffffff,
-    border: #ffffff,
-    border-04: #{rgba(#ffffff, .4)},
-    error: #ff5656,
-    warning: #fffb53,
-    success: #00FFBC
-  ),
-  dark:(
-    primary: #000000,
-    primary-dark: #3e3e3e,
-    secondary: #ff3bb3,
-    secondary-dark: #ff4814,
-    tertiary: #ff4b21,
-    light: #ffffff,
-    dark: #000000,
-    dark-06: #0a0a0acc,
-    dark-04: #00000066,
-    dark-01: #0e11171a,
-    base: #ffffff,
-    border: #ffffff,
-    border-04: #fe1ca50a,
-    error: #ff5656,
-    warning: #fff900,
-    success:#31f507
-  ),
-  ocean:(
-    primary: #3673c9,
-    primary-dark: #134ea1,
-    secondary: #1de9b6,
-    secondary-dark: #25bf9b,
-    tertiary: #f38dad,
-    light: #e4eaf3,
-    dark: #222f34,
-    dark-06: #{rgba(#222f34, .6)},
-    dark-04: #{rgba(#222f34, .4)},
-    dark-01: #{rgba(#222f34, .1)},
-    base: #e4eaf3,
-    border: #e4eaf3,
-    border-04: #{rgba(#7390aa, .4)},
-    error: #d42a29,
-    warning: #cea860,
-    success:#00FFBC
-  ),
-  github:(
-    primary: #22272e,
-    primary-dark: #373e47,
-    secondary: #99c8ff,
-    secondary-dark: #4e8ee2,
-    tertiary: #e34c26,
-    light: #c9d1d9,
-    dark: #0e1117,
-    dark-06: #{rgba(#0e1117, .6)},
-    dark-04: #{rgba(#0e1117, .4)},
-    dark-01: #{rgba(#0e1117, .1)},
-    base: #c9d1d9,
-    border: #adbac7,
-    border-04: #{rgba(#adbac7, .4)},
-    error: #ff7b72,
-    warning: #f1e05a,
-    success:#3eb950
+    base: var(--cl-primary),
+    border: var(--cl-tertiary-light),
+    error: #61AA6C,
+    warning: #F9D24B,
+    success: #61AA6C
   )
 );
 
-$primary: var(--cl-primary);
-$primary-dark: var(--cl-primary-dark);
-$secondary: var(--cl-secondary);
-$secondary-dark: var(--cl-secondary-dark);
-$tertiary: var(--cl-tertiary);
+$primary-c: var(--cl-primary);
+$primary-c-dark: var(--cl-primary-dark);
+$secondary-c: var(--cl-secondary);
+$secondary-c-dark: var(--cl-secondary-dark);
+$tertiary-c: var(--cl-tertiary);
 
-$light: var(--cl-light);
+$light-c: var(--cl-light);
 
-$dark: var(--cl-dark);
-$dark06: var(--cl-dark-06);
-$dark04: var(--cl-dark-04);
-$dark01: var(--cl-dark-01);
+$dark-c: var(--cl-dark);
 
-$error: var(--cl-error);
-$warning: var(--cl-warning);
-$success: var(--cl-success);
+$error-c: var(--cl-error);
+$warning-c: var(--cl-warning);
+$success-c: var(--cl-success);
 
 $base-color: var(--cl-base);
 $border-color: var(--cl-border);
@@ -126,7 +88,7 @@ $transition-shadow: box-shadow $transition-default !default;
 $transition-start-delay: 1s;
 $transition-start-duration: 2s;
 
-$base-font-color: $secondary !default;
+$base-font-color: $secondary-c !default;
 $base-font-size-color: 16px !default;
 
 // * images source
@@ -135,57 +97,34 @@ $assets-path: '/assets/img/' !default;
 // * fonts
 $font-path: '/assets/fonts' !default;
 $font-inter-path: $font-path + '/Inter/' !default;
-$font-family-primary: 'Montserrat', sans-serif;
+$font-family-primary: 'Open Sans', sans-serif;
 
 $icon-font-family: 'portal-icons' !default;
-$icon-font-prefix: 'hpi-';
+$icon-font-prefix: 'pri-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
-$hpi-frozen: "\e916";
-
 $icons-font-map: (
-  arrow-down: $hpi-arrow-down,
-  arrow-left: $hpi-arrow-left,
-  arrow-line-right: $hpi-arrow-line-right,
-  arrow-right: $hpi-arrow-right,
-  arrow-up: $hpi-arrow-up,
-  egg: $hpi-egg,
-  fet: $hpi-fet,
-  ivf: $hpi-ivf,
-  microscope: $hpi-microscope,
-  minus: $hpi-minus,
-  plus: $hpi-plus,
-  quote: $hpi-quote,
-  soc-fb: $hpi-sco-fb,
-  soc-in: $hpi-soc-in,
-  soc-inst: $hpi-soc-inst,
-  soc-tell: $hpi-soc-tell,
-  soc-viber: $hpi-soc-viber,
-  soc-wapp: $hpi-soc-wapp,
-  surr: $hpi-surr,
-  close: $hpi-close,
-  sur-egg: $hpi-sur-egg,
-  surrogacy: $hpi-surrogacy,
-  frozen: $hpi-frozen,
-  legal: $hpi-legal,
-  pregnancy-support: $hpi-pregnancy-support
 );
 
 // * shadows
-$sh-card: 0 rem(-37) rem(80) rem(-20) $dark04;
-$sh-text: rem(0) rem(1) rem(0) $light;
-$sh-text2: rem(0) rem(1) rem(7) $dark06;
+$sh-card: 0 rem(3) rem(13) rgba(38, 38, 38, 0.32);
+
+//* links
+$link-color: currentColor !default;
+$link-hover-color: $secondary-c !default;
 
 //* Scrolls
 $scroll-size: var(--scroll-size, rem(5));
 $scroll-border-radius: 0;
-$scroll-thumb-color: $secondary;
-$scroll-thumb-hover-color: $secondary-dark;
-$scroll-track-color: $light;
+$scroll-thumb-color: $secondary-c;
+$scroll-thumb-hover-color: $secondary-c-dark;
+$scroll-track-color: $light-c;
 $scroll-track-line: inset 0 0 0 0px $scroll-track-color;
 
 //* Cursor
 $cursor-size: rem(30);
-$cursor-color: $secondary;
-$cursor-color-active: $primary-dark;
-
+$cursor-color: $secondary-c;
+$cursor-color-active: $primary-c-dark;
+//* links
+$link-color: currentColor !default;
+$link-hover-color: var(--cl-yellow-orange-s) !default;
