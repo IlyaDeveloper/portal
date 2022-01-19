@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 /* ------------------------------------------- core */
-/* ------------------------------------------- libs */
 @import 'styles/functions';
 @import 'styles/mixins';
 @import 'styles/variables';
 @import 'styles/fonts';
 @import 'styles/root';
 @import 'styles/scrolls';
-//@import 'styles/imports/bootstrap';
+/* ------------------------------------------- libs */
+@import 'styles/imports/bootstrap';
 /* ------------------------------------------- layout-root */
 @import 'styles/base';
 @import 'styles/animations';

@@ -1,12 +1,12 @@
 @import "core";
 
 :host {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  max-width: rem(151);
-  height: rem(28);
-
+  display: block;
   line-height: 1;
+}
+
+
+.__logo{
+  max-width: rem(75);
+  height: rem(16);
 }

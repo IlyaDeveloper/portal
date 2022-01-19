@@ -31,7 +31,8 @@ $containerLimit: rem(screens(desktopMd)) + rem(32);
 $containerOffset: calc(var(--container-gutter) * -1);
 $contentGutter: rem(16) !default;
 $contentGutterX2: rem(24) !default;
-$contentGutterX3: rem(48) !default;
+$contentGutterX3: rem(32) !default;
+$contentGutterX4: rem(48) !default;
 $sectionSpacer: var(--section-spacer, rem(70)) !default;
 
 $contentSizeExtraSmall: rem(472) !default;
@@ -63,9 +64,10 @@ $themes-map: (
 );
 
 $primary-c: var(--cl-primary);
-$primary-c-dark: var(--cl-primary-dark);
+$primary-c-light: var(--cl-primary-light);
+$primary-c-lighten: var(--cl-primary-lighten);
 $secondary-c: var(--cl-secondary);
-$secondary-c-dark: var(--cl-secondary-dark);
+$secondary-c-light: var(--cl-secondary-light);
 $tertiary-c: var(--cl-tertiary);
 
 $light-c: var(--cl-light);
@@ -100,7 +102,7 @@ $font-inter-path: $font-path + '/Inter/' !default;
 $font-family-primary: 'Open Sans', sans-serif;
 
 $icon-font-family: 'portal-icons' !default;
-$icon-font-prefix: 'pri-';
+$icon-font-prefix: 'bi-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
 $icons-font-map: (
@@ -117,14 +119,23 @@ $link-hover-color: $secondary-c !default;
 $scroll-size: var(--scroll-size, rem(5));
 $scroll-border-radius: 0;
 $scroll-thumb-color: $secondary-c;
-$scroll-thumb-hover-color: $secondary-c-dark;
+$scroll-thumb-hover-color: $secondary-c-light;
 $scroll-track-color: $light-c;
 $scroll-track-line: inset 0 0 0 0px $scroll-track-color;
 
 //* Cursor
 $cursor-size: rem(30);
 $cursor-color: $secondary-c;
-$cursor-color-active: $primary-c-dark;
+$cursor-color-active: $primary-c-light;
 //* links
 $link-color: currentColor !default;
 $link-hover-color: var(--cl-yellow-orange-s) !default;
+
+//* z-index
+$z-index-step: 10 !default;
+$z-index: (
+  start: 10,
+  middle: 50,
+  header: 100,
+  modal: 1000
+) !default;

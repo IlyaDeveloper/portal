@@ -12,7 +12,6 @@ html {
 
   //@include content-scale($contentScale);
 
-
   @include min-wide(phones) {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
@@ -26,7 +25,7 @@ body {
   min-height: 100vh;
 
   margin: 0;
-  padding: var(--header-hgt) 0 0;
+  //padding: var(--header-hgt) 0 0;
 
   background-color: var(--body-color, var(--cl-white));
 

@@ -1,0 +1,81 @@
+@import "core";
+
+$cursor-size: rem(30);
+$cursor-color: var(--cl-pink-dark);
+$cursor-color-active: $primary-c-light;
+
+.cursor {
+  position: absolute;
+  z-index: z-index(modal) + $z-index-step;
+
+  width: $cursor-size;
+  height: $cursor-size;
+
+  border: 1px solid var(--cl-blue);
+  border-radius: 50%;
+
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+
+  animation: cursorAnim 2s infinite alternate;
+  pointer-events: none;
+
+  &::after {
+    position: absolute;
+    top: rem(-1) !important;
+    left: rem(-1) !important;
+
+    width: $cursor-size;
+    height: $cursor-size;
+
+    content: "";
+
+    border: dv($cursor-size, 2) solid $cursor-color;
+    border-radius: 50%;
+    opacity: .5;
+
+    box-shadow: 0 0 rem(5) var(--cl-white);
+    animation: cursorAnim2 1.5s infinite alternate;
+  }
+
+  &.--expand {
+    animation: cursorAnim3 2s forwards;
+    border: 1px solid $cursor-color-active;
+  }
+
+  @include only-touch{
+    display: none;
+    height: 0;
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
