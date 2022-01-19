@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -26,6 +26,8 @@
     "@angular/router": "~13.1.2",
     "bootstrap": "5.0.2",
     "bootstrap-icons": "^1.7.2",
+    "express": "^4.17.2",
+    "path": "^0.12.7",
     "rsync": "^0.6.1",
     "rxjs": "^6.6.7",
     "tslib": "^2.3.0",
@@ -49,6 +51,6 @@
   },
   "engines": {
     "node": "16.13.0",
-    "npm": "6.14.5"
+    "npm": "8.1.0"
   }
 }
