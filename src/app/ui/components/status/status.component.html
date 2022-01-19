@@ -13,13 +13,14 @@
 
   <div class="__item" fxLayout="row nowrap" fxLayoutAlign="center start">
      <span class="__status" [ngClass]="{'--warn':v1 === 'warn',
-                 '--error': v1 === 'error'}"></span>
+                 '--error': v1 === 'error', '--success': v1 === 'success'}"></span>
     <span class="">{{v2}}</span>
   </div>
 
   <div class="__dropdown" *ngIf="isToggleDropdown">
     <div class="__dropdown-item" *ngFor="let item of additions" (click)="getData(item.state, item.params)">
-      <span class="__status" [ngClass]="{'--warn': item.state === 'warn' ,'--error': item.state === 'error'}"></span>
+      <span class="__status" [ngClass]="{'--warn': item.state === 'warn'
+       ,'--error': item.state === 'error' ,'--success': item.state === 'success'}"></span>
       <div class="">{{item.params}}</div>
     </div>
   </div>

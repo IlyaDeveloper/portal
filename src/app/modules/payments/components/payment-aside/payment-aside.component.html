@@ -1,0 +1,16 @@
+<article class="container" fxLayout="column" fxFlex="1 1">
+  <header class="__head">Payment Request Activity</header>
+
+  <div class="__list">
+    <article class="__item" *ngFor="let item of list">
+      <mark class="__name">{{ item.name }}</mark>
+
+      <span class="__date">{{ item.date }}</span>
+
+      <p class="__info">
+        {{ item.activityStatus }}
+        <span class="__mar">{{ item.info }}</span>
+      </p>
+    </article>
+  </div>
+</article>

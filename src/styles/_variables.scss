@@ -57,9 +57,41 @@ $themes-map: (
     dark: #000000,
     base: var(--cl-primary),
     border: var(--cl-tertiary-light),
-    error: #61AA6C,
+    error: #CE3A20,
     warning: #F9D24B,
     success: #61AA6C
+  ),
+  ocean:(
+    primary: #3673c9,
+    primary-light: #134ea1,
+    primary-lighten: #134ea1,
+    secondary: #1de9b6,
+    secondary-dark: #25bf9b,
+    tertiary: #f38dad,
+    tertiary-light: #EAEBEF,
+    light: #e4eaf3,
+    dark: #222f34,
+    base: var(--cl-primary),
+    border: var(--cl-tertiary-light),
+    error: #d42a29,
+    warning: #cea860,
+    success: #00FFBC
+  ),
+  github:(
+    primary: #22272e,
+    primary-light: #373e47,
+    primary-lighten: #373e47,
+    secondary: #99c8ff,
+    secondary-dark: #4e8ee2,
+    tertiary: #e34c26,
+    tertiary-light: #d66e54,
+    light: #c9d1d9,
+    dark: #0e1117,
+    base: #c9d1d9,
+    border: #adbac7,
+    error: #ff7b72,
+    warning: #f1e05a,
+    success: #3eb950
   )
 );
 
@@ -72,8 +104,9 @@ $tertiary-c: var(--cl-tertiary);
 $tertiary-c-light: var(--cl-tertiary-light);
 
 $light-c: var(--cl-light);
-
 $dark-c: var(--cl-dark);
+
+$back-color: var(--body-color, $light-c);
 
 $error-c: var(--cl-error);
 $warning-c: var(--cl-warning);

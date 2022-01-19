@@ -39,15 +39,15 @@ $status-spacer: rem(15);
   transform: translateY(-50%);
 
   &.--warn {
-    --satus-color: #{$warning-c};
+    --satus-color: #{$warning-c} !important;
   }
 
   &.--error {
-    --satus-color: #{$error-c};
+    --satus-color: #{$error-c} !important;
   }
 
   &.--success {
-    --satus-color: #{$success-c};
+    --satus-color: #{$success-c} !important;
   }
 }
 
@@ -56,7 +56,7 @@ $status-spacer: rem(15);
   top: 105%;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: $z-index-step + 1;
 
   display: grid;
   grid-gap: rem(8);
@@ -83,8 +83,8 @@ $status-spacer: rem(15);
       left: 0;
     }
 
-    @include only-mouse{
-      &:hover{
+    @include only-mouse {
+      &:hover {
         color: $secondary-c;
       }
     }

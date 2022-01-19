@@ -18,6 +18,8 @@ html {
 
     will-change: scroll-position;
   }
+
+  @extend %scroll-small;
 }
 
 body {
@@ -25,9 +27,8 @@ body {
   min-height: 100vh;
 
   margin: 0;
-  //padding: var(--header-hgt) 0 0;
 
-  background-color: var(--body-color, var(--cl-white));
+  background-color: $back-color ;
 
   opacity: 0;
   animation: smooth-opacity 2s .6s 1 forwards cubic-bezier(.17, .67, .83, .67);

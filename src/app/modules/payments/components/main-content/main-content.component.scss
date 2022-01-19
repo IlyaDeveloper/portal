@@ -1,0 +1,11 @@
+@import "src/styles/core";
+
+:host{
+  display: grid;
+
+  overflow: auto;
+}
+
+.__list{
+  padding:  $contentGutter 0;
+}

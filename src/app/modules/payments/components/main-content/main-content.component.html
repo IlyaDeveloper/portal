@@ -1,0 +1,13 @@
+<section class="__list container" gdGap="0.8rem">
+
+  <prt-payment-card *ngFor="let item of list"
+                    [name]="item.name"
+                    [price]="item.price"
+                    [id]="item.id"
+                    [date]="item.date"
+                    [sub]="item.sub"
+                    [due]="item.due"
+                    [status]="item.status"
+                    [additions]="item.additions"
+  ></prt-payment-card>
+</section>

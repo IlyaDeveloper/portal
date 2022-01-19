@@ -3,7 +3,8 @@
   --container-limit: #{$containerLimit};
   --container-gutter: #{$contentGutterX2};
 
-  --header-hgt: #{rem(78)};
+  //--header-hgt: #{rem(78)};
+  --footer-height: #{rem(78)};
 
   //* root themes
   @include generate-themes($themes-map);

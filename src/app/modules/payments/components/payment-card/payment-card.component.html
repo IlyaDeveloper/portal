@@ -1,0 +1,34 @@
+<article class="__card" gdGap="0 2rem"
+         gdAlignColumns="center center"
+         gdColumns=" 1fr auto auto auto"
+         [ngClass]="{'--warn': status === 'warn',
+         '--error': status === 'error',
+         '--success': status === 'success'
+         }">
+
+  <h2 class="__name" gdArea="1 / 1 /1" fxLayout="row">
+    {{ name }}
+    <mark>${{ price }}</mark>
+  </h2>
+
+  <mark class="__sub" gdArea="2 / 1 / 2">
+    <span>#{{ id }}</span>
+    <span>{{ date }}</span>
+    <span>{{ sub }}</span>
+  </mark>
+
+  <mark class="__due"
+        gdArea="3 / 1 span / 1"
+        gdGridAlign="end center">{{due}}</mark>
+
+  <div gdArea="3 / 1 span / 1"
+       gdGridAlign="end center">
+    <prt-status [additions]="additions"></prt-status>
+  </div>
+
+  <button class="__btn-more" type="button"
+          gdArea="4 / 1 span / 1"
+          gdGridAlign="end center">
+    <i class="bi bi-three-dots-vertical"></i>
+  </button>
+</article>

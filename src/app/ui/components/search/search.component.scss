@@ -1,6 +1,7 @@
 @import "core";
 
 $search-btn-size: rem(38);
+$search-input-height: rem(44);
 
 :host {
   display: grid;
@@ -10,7 +11,7 @@ $search-btn-size: rem(38);
 
   align-items: center;
 
-  &:not(.--full){
+  &:not(.--full) {
     max-width: rem(400);
   }
 }
@@ -30,12 +31,13 @@ $search-btn-size: rem(38);
 
   input {
     width: 100%;
-    height: rem(44);
+    height: $search-input-height;
 
     padding: rem(14) rem(18) rem(14) rem((18 *2) + 14);
 
-    border: none;
-    border-radius: rem(24);
+    border: unset;
+    border-radius: dv($search-input-height, 2);
+    outline: unset;
 
     background: $tertiary-c-light;
 
@@ -50,7 +52,6 @@ $search-btn-size: rem(38);
     left: rem(18);
   }
 }
-
 
 .__btn {
   display: inline-flex;
