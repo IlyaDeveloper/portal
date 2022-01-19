@@ -13,7 +13,7 @@ $status-spacer: rem(15);
   font-size: rem(14);
   letter-spacing: rem(0.1);
 
-  border-radius: rem(36/2);
+  border-radius: rem(dv(36,2));
   border: rem(1) solid $border-color;
 
   user-select: none;
