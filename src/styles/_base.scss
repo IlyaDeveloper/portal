@@ -1,0 +1,208 @@
+html {
+  font-family: $font-family-primary;
+  font-size: $base-font-size-color;
+  font-weight: normal;
+  text-align: left;
+  line-height: normal;
+  letter-spacing: normal;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include content-scale($contentScale);
+
+  &.--small-scroll {
+    &,
+    * {
+      @include only-mouse {
+        @include scroll-small;
+      }
+    }
+  }
+
+  &.--scroll-header-opacity {
+    --header-opacity: 0.6;
+  }
+
+  &.--loader, &[loading="true"] {
+    &:before {
+      --loader-size: #{48px};
+
+      position: fixed;
+      top: calc(50% - (var(--loader-size) / 2)) !important;
+      left: calc(50% - (var(--loader-size) / 2)) !important;
+      z-index: z-index('modal')  + $z-index-step;
+
+      width: var(--loader-size);
+      height: var(--loader-size);
+
+      content: '';
+
+      color: $cl-primary;
+
+      border: 2px solid transparent;
+      border-top-color: inherit;
+      border-left-color: inherit;
+      border-radius: 50%;
+
+      animation: .4s linear infinite rotate;
+    }
+
+    body {
+      visibility: hidden;
+      animation: stop;
+    }
+  }
+
+  &[themes="new-year"] {
+    //--body-color: #{aliceblue};
+    //--grad-color: #{aliceblue};
+    --header-gard: ''
+  }
+
+  @include min-wide(phones) {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    will-change: scroll-position;
+  }
+}
+
+body {
+  position: absolute;
+
+  width: 100%;
+  min-height: 100%;
+  //min-height: 100vh;
+
+  margin: 0;
+  padding: var(--header-hgt) 0 0;
+
+  background-color: var(--body-color, var(--cl-white));
+
+  opacity: 0;
+  animation: smooth-opacity 2s .6s 1 forwards cubic-bezier(.17, .67, .83, .67);
+}
+
+//body {
+//  height: 100vh;
+//  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+//  overflow: hidden;
+//  filter: drop-shadow(0 0 10px white);
+//}
+
+body, .root {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+a {
+  color: var(--link-color, $link-color);
+
+  cursor: pointer;
+  user-select: none;
+
+  text-decoration: none;
+
+  @include only-mouse {
+    &:hover {
+      color: var(--link-color-hover, $link-hover-color);
+    }
+  }
+
+  &, &:active {
+    text-decoration: none;
+  }
+}
+
+a,
+button,
+select {
+  text-decoration: none;
+
+  outline: none;
+
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+mark {
+  padding: 0;
+
+  color: inherit;
+  background-color: transparent;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+figure {
+  margin: 0;
+}
+
+input {
+  appearance: none;
+}
+
+*::selection {
+  background-color: $selection-text-bg;
+  color: $selection-text-color;
+}
+
+.container {
+  @if $customContainer {
+    width: 100%;
+    max-width: var(--container-limit, auto);
+
+    padding-right: var(--container-gutter, 0);
+    padding-left: var(--container-gutter, 0);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (max-height: 420px) {
+    @include phones-fit-max-evn(16px);
+  }
+}
+
+[routerLink] {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+//h1, .title {
+//  font-family: $font-family-primary;
+//  font-style: normal;
+//  font-weight: bold;
+//  font-size: rem(48);
+//  line-height: 106%;
+//}

@@ -1,0 +1,6 @@
+%show-fade {
+  opacity: 0;
+
+  animation: smooth-opacity 1.2s 1 both alternate linear;
+  will-change: opacity;
+}

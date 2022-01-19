@@ -1,0 +1,70 @@
+@include keyframes(slide-is) {
+  from {
+    transform: translate(var(--slide-is-translate-from, -100vw, 0));
+  }
+
+  to {
+    transform: translate(var(--slide-is-translate-end, 0, 0));
+  }
+}
+
+@include keyframes(arrow-top) {
+  0% {
+    opacity: 0.8;
+    transform: translateY(rem(-13));
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(rem(13));
+  }
+}
+
+@include keyframes(swipe-down) {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh) scaleY(0);
+  }
+
+  50% {
+    transform: translateY(-10vh) scaleY(0.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@include keyframes(smooth-opacity) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(rotate) {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(scale-in) {
+  from {
+    transform: scale(var(--slide-is-scale-from, 0));
+  }
+
+  to {
+    transform: scale(var(--slide-is-scale-to, 1));
+  }
+}

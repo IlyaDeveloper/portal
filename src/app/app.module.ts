@@ -1,8 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AppRoutingModule} from './app-routing.module';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NativeRefService} from "./core/refs/native-ref.service";
 
 @NgModule({
   declarations: [
@@ -10,9 +13,16 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    NativeRefService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -19,7 +19,45 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@core/*": [
+        "src/app/core/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@steps/*": [
+        "src/app/steps/*"
+      ],
+      "@charts/*": [
+        "src/app/charts/*"
+      ],
+      "@layout/*": [
+        "src/app/layout/*"
+      ],
+      "@score/*": [
+        "src/app/score/*"
+      ],
+      "@ui/*": [
+        "src/app/ui/*"
+      ],
+      "@root-store/*": [
+        "src/app/root-store/*"
+      ],
+      "@modules/*": [
+        "src/app/modules/*"
+      ],
+      "@jsons/*": [
+        "src/assets/json/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
