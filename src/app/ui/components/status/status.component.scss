@@ -1,0 +1,108 @@
+@import "core";
+
+$status-spacer: rem(15);
+
+.__area {
+  position: relative;
+
+  min-width: rem(178);
+  min-height: rem(35);
+
+  padding: rem(4) (($status-spacer*2) +rem(10)) rem(4);
+
+  font-size: rem(14);
+  letter-spacing: rem(0.1);
+
+  border-radius: rem(36/2);
+  border: rem(1) solid $border-color;
+
+  user-select: none;
+
+  @include only-mouse {
+    &:hover {
+      border-color: $primary-c-lighten;
+    }
+  }
+}
+
+.__status {
+  position: absolute;
+  top: 50%;
+  left: rem(15);
+
+  width: rem(10);
+  height: rem(10);
+
+  border-radius: 50%;
+  background: var(--satus-color, $tertiary-c);
+
+  transform: translateY(-50%);
+
+  &.--warn {
+    --satus-color: #{$warning-c};
+  }
+
+  &.--error {
+    --satus-color: #{$error-c};
+  }
+
+  &.--success {
+    --satus-color: #{$success-c};
+  }
+}
+
+.__dropdown {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  display: grid;
+  grid-gap: rem(8);
+
+  height: max-content;
+  max-height: rem(250);
+
+  padding: $contentGutter;
+
+  border-radius: $elemRadius $elemRadius;
+  background: #fff;
+  box-shadow: $sh-card;
+
+  overflow: auto;
+
+  &-item {
+    position: relative;
+
+    padding: 0 rem(20);
+
+    cursor: pointer;
+
+    .__status {
+      left: 0;
+    }
+
+    @include only-mouse{
+      &:hover{
+        color: $secondary-c;
+      }
+    }
+  }
+}
+
+.__btn {
+  position: absolute;
+  top: 50%;
+  right: $status-spacer;
+
+  padding: rem(4);
+
+  font-size: rem(10);
+  color: $primary-c-light;
+
+  border: unset;
+  background: unset;
+
+  transform: translateY(-50%);
+}

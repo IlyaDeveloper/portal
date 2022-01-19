@@ -8,7 +8,7 @@
   </article>
 
   <article>
-    <nav class="__tabs" fxLayout="row">
+    <nav class="__tabs" fxLayout="row" >
       <button class="__tab --active">All</button>
       <button class="__tab">Outstanding</button>
       <button class="__tab">Paid</button>
@@ -16,10 +16,9 @@
     </nav>
 
     <div class="__detail" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
-      <div>
-        <prt-tag *ngFor="let statusItem of statusList">status</prt-tag>
+      <div fxLayout="row"  fxLayoutGap="0.5rem">
+        <prt-tag *ngFor="let statusItem of statusList">{{statusItem}}</prt-tag>
       </div>
-
 
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'prt-status',
@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./status.component.scss']
 })
 export class StatusComponent implements OnInit {
+  @Input() additions: any = [];
 
-  constructor() { }
+  isToggleDropdown: boolean = false;
 
-  ngOnInit(): void {
+  v1: string = '';
+  v2: string = '';
+
+  constructor() {
   }
 
+  ngOnInit(): void {
+    this.getData(this.additions[0].state, this.additions[0].params);
+  }
+
+  openDropdown(): void {
+    this.isToggleDropdown = !this.isToggleDropdown
+  }
+
+  getData(val: string, val2: string) {
+    this.v1 = val;
+    this.v2 = val2;
+  }
 }

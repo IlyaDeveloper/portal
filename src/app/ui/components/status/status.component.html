@@ -1,1 +1,26 @@
-<p>status works!</p>
+<div class="__area"
+     fxLayout="row"
+     fxLayoutAlign="center"  (click)="openDropdown()">
+
+  <button class="__btn"
+          type="button"
+          [class.--isToggle]="isToggleDropdown"
+         >
+    <i class="bi"
+       [ngClass]="{'bi-caret-down-fill': !isToggleDropdown, 'bi-caret-up-fill': isToggleDropdown}">
+    </i>
+  </button>
+
+  <div class="__item" fxLayout="row nowrap" fxLayoutAlign="center start">
+     <span class="__status" [ngClass]="{'--warn':v1 === 'warn',
+                 '--error': v1 === 'error'}"></span>
+    <span class="">{{v2}}</span>
+  </div>
+
+  <div class="__dropdown" *ngIf="isToggleDropdown">
+    <div class="__dropdown-item" *ngFor="let item of additions" (click)="getData(item.state, item.params)">
+      <span class="__status" [ngClass]="{'--warn': item.state === 'warn' ,'--error': item.state === 'error'}"></span>
+      <div class="">{{item.params}}</div>
+    </div>
+  </div>
+</div>

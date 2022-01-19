@@ -33,5 +33,13 @@
       color: $secondary-c;
       border-color: currentColor;
     }
+
+    &.--is-selected {
+      &:hover {
+        color: unset;
+        border-color: currentColor;
+        background: unset;
+      }
+    }
   }
 }

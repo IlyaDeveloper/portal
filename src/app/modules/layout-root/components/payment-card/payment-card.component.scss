@@ -1,0 +1,110 @@
+@import "core";
+
+%dot-line {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(8);
+
+  margin-left: rem(8);
+
+  user-select: none;
+
+  &:before {
+    content: '·';
+    font-weight: 900;
+    line-height: 1;
+  }
+}
+
+.__card {
+  position: relative;
+
+  padding: $contentGutterX2 $contentGutterX4;
+
+  border-radius: $elemRadius;
+  background: #fff;
+  box-shadow: $sh-card;
+
+  transition: transform 0.5s linear;
+
+  &:before {
+    position: absolute;
+    top: rem(8);
+    left: rem(8);
+    bottom: rem(8);
+    width: rem(4);
+
+    content: '';
+    border-radius: rem(3);
+    background: var(--card-satus-color, $tertiary-c);
+  }
+
+  &.--warn {
+    --card-satus-color: #{$warning-c};
+  }
+
+  &.--error {
+    --card-satus-color: #{$error-c};
+  }
+
+  &.--success {
+    --card-satus-color: #{$success-c};
+  }
+
+  @include only-mouse {
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+}
+
+.__name {
+  margin: 0;
+
+  font-size: rem(20);
+  font-weight: 700;
+
+  mark {
+    @extend %dot-line;
+  }
+}
+
+.__sub {
+  font-size: rem(14);
+  font-weight: 500;
+  color: $primary-c-lighten;
+  letter-spacing: rem(-0.5);
+
+  *:not(:first-of-type) {
+    @extend %dot-line;
+  }
+}
+
+.__due {
+  font-size: rem(14);
+  font-weight: 500;
+  color: $primary-c-lighten;
+  letter-spacing: rem(-0.5);
+}
+
+.__select {
+}
+
+.__btn-more {
+  padding: rem(8) 0 rem(8) 0;
+  font-size: rem(14);
+
+  color: $primary-c-lighten;
+  line-height: 1;
+
+  border: unset;
+  background: unset;
+
+  @include only-mouse {
+    &:hover {
+      color: $secondary-c;
+    }
+  }
+
+}
