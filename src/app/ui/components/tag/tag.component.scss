@@ -1,0 +1,37 @@
+@import "core";
+
+.__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: rem(29);
+
+  padding: rem(10) rem(14);
+
+  font-size: rem(15);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: capitalize;
+  text-align: center;
+
+  border: rem(1) solid $border-color;
+  border-radius: rem(20);
+
+  transition: $transition-default;
+  cursor: pointer;
+  user-select: none;
+
+  &.--is-selected {
+    color: $light-c;
+    border-color: $secondary-c;
+    background-color:$secondary-c ;
+  }
+
+  @include only-mouse {
+    &:hover {
+      color: $secondary-c;
+      border-color: currentColor;
+    }
+  }
+}

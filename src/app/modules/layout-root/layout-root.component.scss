@@ -1,6 +1,5 @@
 @import "core";
 
-
 :host {
   display: grid;
   grid-auto-flow: column;
@@ -12,9 +11,6 @@
 }
 
 .__content {
-  flex: 1 1;
-
-
   z-index: 1;
 }
 
