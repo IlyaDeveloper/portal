@@ -136,10 +136,66 @@ $font-inter-path: $font-path + '/Inter/' !default;
 $font-family-primary: 'Open Sans', sans-serif;
 
 $icon-font-family: 'portal-icons' !default;
-$icon-font-prefix: 'bi-';
+$icon-font-prefix: 'pri-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
+$pti-users-group: "\e900";
+$pti-calendar: "\e901";
+$pti-cart: "\e902";
+$pti-catalog: "\e903";
+$pti-check-round: "\e904";
+$pti-check-square: "\e905";
+$pti-check: "\e906";
+$pti-chevron-down: "\e907";
+$pti-chevron-up: "\e908";
+$pti-close: "\e909";
+$pti-edit-2: "\e90a";
+$pti-ellipsis-h-alt: "\e90b";
+$pti-ellipsis-h: "\e90c";
+$pti-ellipsis-v-alt: "\e90d";
+$pti-ellipsis-v: "\e90e";
+$pti-email-open: "\e90f";
+$pti-email: "\e910";
+$pti-minus: "\e911";
+$pti-paper-plane: "\e912";
+$pti-phone: "\e913";
+$pti-plus: "\e914";
+$pti-proposals: "\e915";
+$pti-search: "\e916";
+$pti-sort-amount-down: "\e917";
+$pti-sort-amount-up: "\e918";
+$pti-trash: "\e919";
+$pti-usd-circle: "\e91a";
+
+
 $icons-font-map: (
+  users-group: $pti-users-group,
+  calendar: $pti-calendar,
+  cart: $pti-cart,
+  catalog: $pti-catalog,
+  check-round: $pti-check-round,
+  check-square: $pti-check-square,
+  check: $pti-check,
+  chevron-down: $pti-chevron-down,
+  chevron-up: $pti-chevron-up,
+  close: $pti-close,
+  edit-2: $pti-edit-2,
+  ellipsis-h-alt: $pti-ellipsis-h-alt,
+  ellipsis-h: $pti-ellipsis-h,
+  ellipsis-v-alt: $pti-ellipsis-v-alt,
+  ellipsis-v: $pti-ellipsis-v,
+  email-open: $pti-email-open,
+  email: $pti-email,
+  minus: $pti-minus,
+  paper-plane: $pti-paper-plane,
+  phone: $pti-phone,
+  plus: $pti-plus,
+  proposals: $pti-proposals,
+  search: $pti-search,
+  sort-amount-down: $pti-sort-amount-down,
+  sort-amount-up: $pti-sort-amount-up,
+  trash: $pti-trash,
+  usd-circle: $pti-usd-circle,
 );
 
 // * shadows
