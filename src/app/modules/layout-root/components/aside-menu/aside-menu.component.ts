@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'prt-aside-menu',
@@ -7,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideMenuComponent implements OnInit {
 
-  constructor() { }
+  isSmallLogo: boolean = false;
+
+  constructor() {
+  }
+
+  @HostListener('window:resize', ['$event']) onResize($event: any) {
+    ($event.target.innerWidth <= 993)
+      ? (this.isSmallLogo = true)
+      : (this.isSmallLogo = false)
+  }
 
   ngOnInit(): void {
+    (window.innerWidth <= 993)
+      ? (this.isSmallLogo = true)
+      : (this.isSmallLogo = false)
   }
 }

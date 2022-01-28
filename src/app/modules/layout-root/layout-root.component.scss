@@ -1,6 +1,6 @@
 @import "core";
 
-$aside-width: rem(254);
+$aside-width: var(--aside-right-width, rem(254));
 
 :host {
   width: 100%;
@@ -22,5 +22,14 @@ $aside-width: rem(254);
   padding: rem(20);
 
   overflow: hidden;
+
+  span {
+
+  }
 }
 
+@include min-wide(notebook) {
+  :host {
+    --aside-right-width: 17.666vw;
+  }
+}

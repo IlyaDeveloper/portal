@@ -1,9 +1,9 @@
 <header class="__wrap">
   <article class="__top" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
-    <h1 class="__title" fxFlex="1 1">Payment Requests</h1>
+    <h1 class="__title" fxFlex="1 1">{{caption$  | async}}</h1>
 
     <div class="__search" fxFlex="1 1" fxLayoutAlign="end">
-      <prt-search fxFlex="1 1"></prt-search>
+      <prt-search fxFlex="1 1" placeholder="{{(caption$  | async )}}" ></prt-search>
     </div>
   </article>
 

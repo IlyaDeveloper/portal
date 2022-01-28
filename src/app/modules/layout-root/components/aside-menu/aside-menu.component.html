@@ -1,5 +1,7 @@
 <article class="__wrap" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="2.625rem">
-  <prt-logo></prt-logo>
+  <div class="__logo">
+    <prt-logo class="--flex" [smallLogo]="isSmallLogo"></prt-logo>
+  </div>
 
   <nav gdGap="2.5rem" fxFlexAlign="stretch">
     <a href class="__link" routerLink="/catalog" routerLinkActive="--active">

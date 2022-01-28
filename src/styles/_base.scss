@@ -28,7 +28,7 @@ body {
 
   margin: 0;
 
-  background-color: $back-color ;
+  background-color: $back-color;
 
   opacity: 0;
   animation: smooth-opacity 2s .6s 1 forwards cubic-bezier(.17, .67, .83, .67);
@@ -118,7 +118,7 @@ input {
 .container {
   @if $customContainer {
     width: 100%;
-    max-width: var(--container-limit, auto);
+    //max-width: var(--container-limit, auto);
 
     padding-right: var(--container-gutter, 0);
     padding-left: var(--container-gutter, 0);

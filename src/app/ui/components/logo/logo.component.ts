@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'prt-logo',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent {
+  @Input() smallLogo: boolean = false;
 
   constructor() { }
 
