@@ -1,0 +1,35 @@
+<article class="__card"
+         gdGap="0 2.5rem"
+         gdAlignColumns="center center"
+         gdColumns="1fr auto auto ">
+  <div class="__name" gdArea="1/1/1">{{name}}</div>
+
+  <div class="__position" gdArea="2/1/auto" fxLayout="row" fxLayoutGap="0.5rem">
+    <ng-template [ngIf]="(position != null) && (position !== '')">
+      <span>{{position}}</span>
+    </ng-template>
+
+    <span>Client</span>
+  </div>
+
+  <a class="__link "
+     gdArea="3/1 span/1"
+     gdGridAlign="end center"
+     fxLayoutAlign="end center"
+     fxLayoutGap="0.3rem"
+     [attr.hreflang]="'mailto:' + email"
+     target="_blank">
+    <i class="pri-email"></i>
+    <span>{{ email }}</span>
+  </a>
+
+  <a class="__link"
+     gdArea="4/1 span/1"
+     gdGridAlign="end center"
+     fxLayoutAlign="end center"
+     fxLayoutGap="0.3rem"
+     [attr.hreflang]="'tel:' + phone">
+    <i class="pri-phone"></i>
+    <span>{{ phone }}</span>
+  </a>
+</article>

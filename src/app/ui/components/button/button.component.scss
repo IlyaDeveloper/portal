@@ -1,0 +1,48 @@
+@import "core";
+
+$button-size: rem(44);
+$button-border: unset;
+$button-color: $light-c;
+$button-bg-color: $secondary-c;
+$button-bg-color-active: $secondary-c-light;
+
+:host {
+  width: 100%;
+
+  &.--second {
+  }
+}
+
+.__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: $button-size;
+
+  padding: 0 $contentGutterX2;
+
+  font-size: rem(15);
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  line-height: rem(20);
+
+  color: $button-color;
+
+  border: $button-border;
+  border-radius: $elemRadius;
+  background-color: $button-bg-color;
+  transition: $transition-default;
+  transition-property: background-color, transform;
+
+  @include only-mouse {
+    &:hover {
+      background-color: $button-bg-color-active;
+    }
+
+    &:active {
+transform: translate(0,rem(-3)) scale(1.02);
+    }
+  }
+}

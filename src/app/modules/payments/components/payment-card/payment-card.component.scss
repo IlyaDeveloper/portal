@@ -20,23 +20,15 @@
 }
 
 .__card {
-  position: relative;
+  @extend %card;
 
-  padding: $contentGutterX2 $contentGutterX4;
-
-  border-radius: $elemRadius;
-  background: $light-c;
-  box-shadow: $sh-card;
-
-  transition: box-shadow 0.5s linear;
-
-  cursor: pointer;
+  padding: $contentGutterX2 rem(37) $contentGutterX2 rem(42);
 
   &:before {
     position: absolute;
-    top: rem(8);
-    left: rem(8);
-    bottom: rem(8);
+    top: rem(9);
+    left: rem(9);
+    bottom: rem(9);
     width: rem(4);
 
     content: '';
@@ -55,14 +47,6 @@
   &.--success {
     --card-satus-color: #{$success-c} !important;
   }
-
-  @include only-mouse {
-    &:hover {
-      z-index: $z-index-step;
-      box-shadow: $sh-card-active;
-      //transform: scale(1.02);
-    }
-  }
 }
 
 .__name {
@@ -78,10 +62,10 @@
 }
 
 .__sub {
-  font-size: rem(14);
+  font-size: rem(15);
   font-weight: 500;
-  color: $primary-c-lighten;
-  letter-spacing: rem(-0.5);
+  color: #27272A;//$primary-c-lighten;
+  letter-spacing: rem(-0.2);
 
   *:not(:first-of-type) {
     @extend %dot-line;

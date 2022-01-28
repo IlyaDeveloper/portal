@@ -38,5 +38,9 @@
 //@import "~bootstrap/scss/spinners";
 //@import "~bootstrap/scss/offcanvas";
 
-// * include only boostrap 5 icons
+// * include only boostrap5 icons
 //@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+.dropdown-menu{
+  box-shadow: $dropdown-box-shadow;
+}

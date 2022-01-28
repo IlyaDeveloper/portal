@@ -4,3 +4,42 @@
   animation: smooth-opacity 1.2s 1 both alternate linear;
   will-change: opacity;
 }
+
+%card {
+  position: relative;
+
+  border-radius: $elemRadius + rem(3);
+  background: $light-c;
+  box-shadow: $sh-card;
+
+  transition: box-shadow 0.5s linear;
+
+  cursor: pointer;
+
+  @include only-mouse {
+    &:hover {
+      z-index: $z-index-step;
+      box-shadow: $sh-card-active;
+    }
+  }
+}
+
+%main-host {
+  display: grid;
+  margin: 0 $containerOffset;
+  padding: 0 0;
+
+  height: 100%;
+
+  overflow: hidden;
+}
+
+%main-list {
+  grid-auto-rows: max-content;
+
+  padding-bottom: $contentGutter;
+
+  overflow: auto;
+
+  @include scroll-small;
+}

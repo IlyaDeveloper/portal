@@ -49,7 +49,7 @@ $themes-map: (
     primary-light: #747474,
     primary-lighten: #939393,
     secondary-light:#ff8659,
-    secondary: #DA5726,
+    secondary: #FF5000,
     secondary-dark: #a73605,
     tertiary: #8E9197,
     tertiary-light: #E4E6EB,
@@ -122,6 +122,8 @@ $success-c: var(--cl-success);
 $base-color: var(--cl-base);
 $border-color: var(--cl-border);
 $border-color04: var(--cl-border-04);
+$border-color-sc: #D0D0D3;
+
 
 $border-pop-window: 1px solid rgba(0, 0, 0, 0.04);
 
@@ -221,7 +223,7 @@ $scroll-border-radius: 0;
 $scroll-thumb-color: $secondary-c;
 $scroll-thumb-hover-color: $secondary-c-light;
 $scroll-track-color: $tertiary-c-lighten;
-$scroll-track-line: inset 0 0 0 0px $scroll-track-color;
+$scroll-track-line: inset 0 0 0 0 $scroll-track-color;
 
 //* Cursor
 $cursor-size: rem(30);

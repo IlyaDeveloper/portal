@@ -1,23 +1,9 @@
 @import "core";
 
-
 :host {
-  display: grid;
-  margin: 0 $containerOffset;
-  padding: 0 0;
-
-  height: 100%;
-
-  overflow: hidden;
-
+  @extend %main-host
 }
 
 .__list {
-  grid-auto-rows: max-content;
-
-  //height: 100%;
-
-  padding-bottom: $contentGutter;
-
-  overflow: auto;
+  @extend %main-list;
 }

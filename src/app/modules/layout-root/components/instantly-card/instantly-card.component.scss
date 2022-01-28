@@ -1,0 +1,35 @@
+@import "core";
+
+
+:host {
+
+}
+
+.__card {
+  padding: rem(36) rem(33);
+
+  text-align: center;
+
+  border-radius: $elemRadius + rem(3);
+  background: #E8E9ED;
+}
+
+.__icon {
+  height: rem(114);
+  width: rem(114);
+}
+
+.__capt {
+  font-size: rem(28);
+
+  font-weight: bold;
+  letter-spacing: rem(-0.93);
+  line-height: rem(29);
+}
+
+.__text {
+  margin: rem(-13) 0 0;
+  font-size: rem(13);
+  letter-spacing: 0;
+  line-height: rem(18);
+}

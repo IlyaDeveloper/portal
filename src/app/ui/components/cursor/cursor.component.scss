@@ -1,12 +1,16 @@
 @import "core";
 
 $cursor-size: rem(30);
-$cursor-color: var(--cl-pink-dark);
+$cursor-color: $secondary-c;
 $cursor-color-active: $primary-c-light;
+
+:host{
+  position: fixed;
+  z-index: z-index(modal) + $z-index-step;
+}
 
 .cursor {
   position: absolute;
-  z-index: z-index(modal) + $z-index-step;
 
   width: $cursor-size;
   height: $cursor-size;

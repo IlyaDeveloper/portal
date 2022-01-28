@@ -7,15 +7,16 @@
 
   min-height: rem(29);
 
-  padding: rem(10) rem(14);
+  padding: rem(5) rem(13);
 
-  font-size: rem(15);
-  font-weight: 500;
+  font-size: rem(13);
+  letter-spacing: -0.19px;
   line-height: 1;
   text-transform: capitalize;
   text-align: center;
+  color: #27272A;
 
-  border: rem(1) solid $border-color;
+  border: rem(1) solid $border-color-sc;
   border-radius: $elemRadius*4;
 
   transition: $transition-default;

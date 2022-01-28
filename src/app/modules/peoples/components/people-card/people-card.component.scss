@@ -1,0 +1,40 @@
+@import "core";
+
+.__card {
+  @extend %card;
+
+  padding: rem(20) 4.8vw rem(20) em(30);
+}
+
+.__name {
+  color: $dark-c;
+  font-size: rem(18);
+  font-weight: bold;
+  letter-spacing: rem(-0.21);
+  line-height: rem(24);
+}
+
+.__position {
+  color: #27272A;
+  font-size: rem(15);
+  letter-spacing: rem(-0.2);
+  line-height: rem(20);
+
+  span {
+    &:not(:first-child) {
+      &:before {
+        content: '   •   ';
+      }
+    }
+  }
+}
+
+.__link {
+  --link-color-hover: #{$link-hover-color};
+  --link-color: #8E9197;
+
+  font-size: rem(13);
+  letter-spacing: rem(-0.17);
+  line-height: rem(18);
+  text-align: right;
+}

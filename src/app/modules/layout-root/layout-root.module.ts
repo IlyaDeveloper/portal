@@ -9,6 +9,7 @@ import {AsideMenuComponent} from "@modules/layout-root/components/aside-menu/asi
 import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from "@modules/layout-root/components/header/header.component";
 import {PaymentAsideComponent} from "@modules/layout-root/components/payment-aside/payment-aside.component";
+import { InstantlyCardComponent } from './components/instantly-card/instantly-card.component';
 
 const COMPONENTS = [
   LayoutRootComponent,
@@ -20,7 +21,8 @@ const COMPONENTS = [
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    FooterComponent
+    FooterComponent,
+    InstantlyCardComponent
   ],
   imports: [
     CommonModule,

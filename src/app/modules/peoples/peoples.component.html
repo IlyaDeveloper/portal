@@ -1,1 +1,9 @@
-<p>people works!</p>
+<section class="__list container" gdGap="0.625rem">
+  <prt-people-card
+    *ngFor="let item of list"
+    [name]="item.name"
+    [position]="item.position"
+    [phone]="item.phone"
+    [email]="item.email">
+  </prt-people-card>
+</section>
