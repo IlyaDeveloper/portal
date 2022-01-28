@@ -10,7 +10,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: rem(10);
+    border-radius: $elemRadius*2;
     background: $scroll-thumb-color;
 
     transition: background-color $transition-default;
@@ -22,7 +22,7 @@
   }
 
   &::-webkit-scrollbar-track {
-    border-radius: rem(6);
+    border-radius: $elemRadius;
     background: $scroll-track-color;
     //box-shadow: $scroll-track-line;
   }

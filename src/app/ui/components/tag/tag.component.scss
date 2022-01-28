@@ -16,16 +16,16 @@
   text-align: center;
 
   border: rem(1) solid $border-color;
-  border-radius: rem(20);
+  border-radius: $elemRadius*4;
 
   transition: $transition-default;
   cursor: pointer;
   user-select: none;
 
   &.--is-selected {
-    color: $light-c;
+    color: $tertiary-c-lighten;
     border-color: $secondary-c;
-    background-color:$secondary-c ;
+    background-color: $secondary-c;
   }
 
   @include only-mouse {

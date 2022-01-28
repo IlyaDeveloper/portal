@@ -67,7 +67,7 @@ $status-spacer: rem(15);
   padding: $contentGutter;
 
   border-radius: $elemRadius $elemRadius;
-  background: #fff;
+  background: $light-c;
   box-shadow: $sh-card;
 
   overflow: auto;

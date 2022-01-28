@@ -63,7 +63,7 @@
 
     content: '';
 
-    border-radius: rem(5);
+    border-radius: $elemRadius;
 
     background: var(--header-btn-color-line, $primary-c);
     transition: bottom $transition-default;

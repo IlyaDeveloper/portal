@@ -1,13 +1,12 @@
 <div class="__area"
      fxLayout="row"
-     fxLayoutAlign="center"  (click)="openDropdown()">
+     fxLayoutAlign="center"
+     (click)="openDropdown()">
 
   <button class="__btn"
           type="button"
-          [class.--isToggle]="isToggleDropdown"
-         >
-    <i class="bi"
-       [ngClass]="{'bi-caret-down-fill': !isToggleDropdown, 'bi-caret-up-fill': isToggleDropdown}">
+          [class.--isToggle]="isToggleDropdown">
+    <i [ngClass]="{'pri-chevron-down': !isToggleDropdown, 'pri-chevron-up': isToggleDropdown}">
     </i>
   </button>
 

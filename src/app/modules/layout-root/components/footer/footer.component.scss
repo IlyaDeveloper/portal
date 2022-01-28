@@ -32,7 +32,7 @@
   min-width: rem(100);
   padding: dv($contentGutter, 5);
 
-  border-radius: rem(8) rem(8) 0 0;
+  border-radius: $elemRadius $elemRadius 0 0;
   border: unset;
   background: $secondary-c;
 
@@ -42,7 +42,7 @@
     position: relative;
 
     @include pseudo-icon($pti-chevron-up, 10);
-    color: $light-c;
+    color: $tertiary-c-lighten;
 
     transform-origin: center;
     transform: rotate(var(--footer-btn-transform, 180deg));
@@ -68,7 +68,7 @@
 
   font-size: rem(14);
   white-space: nowrap;
-  color: $light-c;
+  color: $tertiary-c-lighten;
 
   background: $primary-c;
   overflow: hidden;
@@ -85,7 +85,7 @@
   height: rem(20);
 
   border-radius: 50%;
-  border: rem(3) solid $light-c;
+  border: rem(3) solid $tertiary-c-lighten;
 
   transition: $transition-default;
 

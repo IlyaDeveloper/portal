@@ -25,10 +25,10 @@
   padding: $contentGutterX2 $contentGutterX4;
 
   border-radius: $elemRadius;
-  background: #fff;
+  background: $light-c;
   box-shadow: $sh-card;
 
-  transition: transform 0.5s linear;
+  transition: box-shadow 0.5s linear;
 
   cursor: pointer;
 
@@ -40,7 +40,7 @@
     width: rem(4);
 
     content: '';
-    border-radius: rem(3);
+    border-radius: $elemRadiusSmall;
     background: var(--card-satus-color, $tertiary-c);
   }
 
@@ -59,7 +59,8 @@
   @include only-mouse {
     &:hover {
       z-index: $z-index-step;
-      transform: scale(1.02);
+      box-shadow: $sh-card-active;
+      //transform: scale(1.02);
     }
   }
 }
@@ -67,8 +68,9 @@
 .__name {
   margin: 0;
 
-  font-size: rem(20);
-  font-weight: 700;
+  font-size: rem(18);
+  letter-spacing: rem(-0.21);
+  font-weight: bold;
 
   mark {
     @extend %dot-line;

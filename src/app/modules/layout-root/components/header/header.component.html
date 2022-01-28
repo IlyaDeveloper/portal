@@ -1,14 +1,14 @@
-<header class="__wrap container">
+<header class="__wrap">
   <article class="__top" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
     <h1 class="__title" fxFlex="1 1">Payment Requests</h1>
 
-    <div class="__search" fxFlex="1 1" fxLayoutAlign="end" >
+    <div class="__search" fxFlex="1 1" fxLayoutAlign="end">
       <prt-search fxFlex="1 1"></prt-search>
     </div>
   </article>
 
   <article>
-    <nav class="__tabs" fxLayout="row" >
+    <nav class="__tabs" fxLayout="row">
       <button class="__tab --active">All</button>
       <button class="__tab">Outstanding</button>
       <button class="__tab">Paid</button>
@@ -16,7 +16,7 @@
     </nav>
 
     <div class="__detail" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
-      <div fxLayout="row"  fxLayoutGap="0.5rem">
+      <div fxLayout="row" fxLayoutGap="0.5rem">
         <prt-tag *ngFor="let statusItem of statusList">{{statusItem}}</prt-tag>
       </div>
 
@@ -25,9 +25,7 @@
         <mark class="__sort-count">1,880 Proposals</mark>
 
         <button class="__sort-btn" (click)="sorted()">
-          <i class="bi"
-             [ngClass]="{'bi-filter-left': filteredType ==='up',
-             'bi-filter-right': filteredType ==='down'}">
+          <i [ngClass]="{'pri-sort-amount-up': filteredType ==='up','pri-sort-amount-down': filteredType ==='down'}">
           </i>
           <span> Sort By</span>
         </button>

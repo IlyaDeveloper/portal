@@ -40,9 +40,8 @@ $contentSizeSmall: rem(568) !default;
 
 $multiplier: 1.25 !default;
 
-$elemRadius: rem(6) !default;
-$elemRadiusNormal: rem(10) !default;
-$elemRadiusSmall: rem(4) !default;
+$elemRadius: rem(5) !default;
+$elemRadiusSmall: rem(3) !default;
 
 $themes-map: (
   default:(
@@ -54,7 +53,8 @@ $themes-map: (
     secondary-dark: #a73605,
     tertiary: #8E9197,
     tertiary-light: #E4E6EB,
-    light: #F5F5F5,
+    tertiary-lighten: #F5F5F5,
+    light: #ffffff,
     dark: #000000,
     base: var(--cl-primary),
     border: var(--cl-tertiary-light),
@@ -70,7 +70,8 @@ $themes-map: (
     secondary-dark: #25bf9b,
     tertiary: #f38dad,
     tertiary-light: #EAEBEF,
-    light: #e4eaf3,
+    tertiary-lighten: #e4eaf3,
+    light: #ffffff,
     dark: #222f34,
     base: var(--cl-primary),
     border: var(--cl-tertiary-light),
@@ -86,6 +87,7 @@ $themes-map: (
     secondary-dark: #4e8ee2,
     tertiary: #e34c26,
     tertiary-light: #d66e54,
+    tertiary-lighten: #c9d1d9,
     light: #c9d1d9,
     dark: #0e1117,
     base: #c9d1d9,
@@ -99,12 +101,14 @@ $themes-map: (
 $primary-c: var(--cl-primary);
 $primary-c-light: var(--cl-primary-light);
 $primary-c-lighten: var(--cl-primary-lighten);
+
 $secondary-c: var(--cl-secondary);
 $secondary-c-dark: var(--cl-secondary-dark);
 $secondary-c-light: var(--cl-secondary-light);
 
 $tertiary-c: var(--cl-tertiary);
 $tertiary-c-light: var(--cl-tertiary-light);
+$tertiary-c-lighten: var(--cl-tertiary-lighten);
 
 $light-c: var(--cl-light);
 $dark-c: var(--cl-dark);
@@ -118,6 +122,8 @@ $success-c: var(--cl-success);
 $base-color: var(--cl-base);
 $border-color: var(--cl-border);
 $border-color04: var(--cl-border-04);
+
+$border-pop-window: 1px solid rgba(0, 0, 0, 0.04);
 
 //* transitions && animations
 $transition-default: 0.3s linear !default;
@@ -201,7 +207,9 @@ $icons-font-map: (
 );
 
 // * shadows
-$sh-card: 0 rem(1) rem(40) rgba(38, 38, 38, 0.12);
+$sh-card: 0 rem(1) rem(3) 0 rgba(0, 0, 0, 0.05);
+$sh-card-active: 0 rem(7) rem(18) 0 rgba(0, 0, 0, 0.16);
+$sh-card-second: 0 rem(2) rem(10) 0 rgba(0, 0, 0, 0.11);
 
 //* links
 $link-color: currentColor !default;
@@ -212,7 +220,7 @@ $scroll-size: var(--scroll-size, rem(5));
 $scroll-border-radius: 0;
 $scroll-thumb-color: $secondary-c;
 $scroll-thumb-hover-color: $secondary-c-light;
-$scroll-track-color: $light-c;
+$scroll-track-color: $tertiary-c-lighten;
 $scroll-track-line: inset 0 0 0 0px $scroll-track-color;
 
 //* Cursor

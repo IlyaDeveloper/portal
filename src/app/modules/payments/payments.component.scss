@@ -1,6 +1,17 @@
 @import "core";
 
+
 :host {
-  //max-height: calc(100vh - var(--footer-height));
+  display: grid;
+  margin: 0 $containerOffset;
+  padding: $contentGutter 0;
+
   overflow: hidden;
+
+}
+
+.__list {
+height: 100%;
+
+  overflow: auto;
 }
