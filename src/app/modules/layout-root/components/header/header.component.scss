@@ -2,7 +2,7 @@
 
 .__wrap {
   padding-top: $contentGutter;
-  padding-bottom: $contentGutterX2;
+  padding-bottom: rem(20);
   width: 100%;
   max-width: 100%;
 }

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 const PAYMENT_LIST = [
   {
-    name: 'Meredith palm',
+    name: 'Meredith Palm',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
@@ -16,13 +16,21 @@ const PAYMENT_LIST = [
           state: 'normal'
         },
         {
-          params: ['submitted'],
-          state: 'normal'
+          params: ['Submitted'],
+          state: 'warn'
+        },
+        {
+          params: ['Paid'],
+          state: 'success'
+        },
+        {
+          params: ['Declined'],
+          state: 'error'
         },
       ]
   },
   {
-    name: 'Maximiliano Montgomery',
+    name: 'Maxamiliano Montgomery',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
@@ -32,90 +40,106 @@ const PAYMENT_LIST = [
     additions:
       [
         {
-          params: ['draft'],
+          params: ['Submitted'],
           state: 'warn'
         },
         {
-          params: ['submitted'],
-          state: 'warn'
+          params: ['Paid'],
+          state: 'success'
+        },
+        {
+          params: ['Declined'],
+          state: 'error'
         },
       ]
   },
   {
-    name: 'Meredith palm',
+    name: 'Maxamiliano Montgomery',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
     sub: 'Whole Home Speaker Install',
     due: 'Due on Feb 2,2020',
-    status: 'success',
+    status: 'warn',
     additions:
       [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
         {
           params: ['submitted'],
-          state: 'success'
-        },
-      ]
-  },
-  {
-    name: 'Meredith palm',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due on Feb 2,2020',
-    status: 'normal',
-    additions:
-      [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
-        {
-          params: ['submitted'],
-          state: 'normal'
-        },
-      ]
-  },
-  {
-    name: 'Maximiliano Montgomery',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Stripe Funding on tuesday 2,2020',
-    status: 'success',
-    additions:
-      [
-        {
-          params: ['Paid - Sprite - ACH'],
-          state: 'success'
-        },
-        {
-          params: ['Actual - Test - Several'],
           state: 'warn'
         },
         {
-          params: ['submitted'],
-          state: 'success'
+          params: ['Submitted'],
+          state: 'warn'
         },
+      ]
+  },
+  {
+    name: 'Maxamiliano Montgomery',
+    price: '123.45',
+    id: '2056',
+    date: '2/28/2022',
+    sub: 'Whole Home Speaker Install',
+    due: 'Stripe Funding on Tuesday',
+    status: 'success',
+    additions:
+      [
+        {
+          params: ['Paid • Stripe - ACH'],
+          state: 'success'
+        }
+      ]
+  },
+  {
+    name: 'Tobias Flenderson',
+    price: '123.45',
+    id: '2056',
+    date: '2/28/2022',
+    sub: 'Whole Home Speaker Install',
+    due: 'Due on Jan 3, 2022',
+    status: 'warn',
+    additions:
+      [
         {
           params: ['Viewed'],
           state: 'warn'
         },
+        {
+          params: ['Paid'],
+          state: 'success'
+        },
+        {
+          params: ['Declined'],
+          state: 'error'
+        },
       ]
   },
   {
-    name: 'Gabriel Susan',
+    name: 'Maxamiliano Montgomery',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
     sub: 'Whole Home Speaker Install',
-    due: 'Due - Dec 30,2022',
+    due: 'Due on Jan 3, 2022',
+    status: 'success',
+    additions:
+      [
+        {
+          params: ['Paid'],
+          state: 'success'
+        },
+        {
+          params: ['Error'],
+          state: 'error'
+        }
+      ]
+  },
+  {
+    name: 'Gabriel Susan Lewis',
+    price: '123.45',
+    id: '2056',
+    date: '2/28/2022',
+    sub: 'Whole Home Speaker Install',
+    due: 'Due - Dec 30, 2022',
     status: 'error',
     additions:
       [
@@ -124,14 +148,18 @@ const PAYMENT_LIST = [
           state: 'error'
         },
         {
-          params: ['Submitted'],
+          params: ['Viewed'],
+          state: 'warn'
+        },
+        {
+          params: ['Paid'],
           state: 'success'
         },
       ]
   },
 
   {
-    name: 'Meredith palm',
+    name: 'Meredith Palm',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
@@ -145,13 +173,21 @@ const PAYMENT_LIST = [
           state: 'normal'
         },
         {
-          params: ['submitted'],
-          state: 'normal'
+          params: ['Submitted'],
+          state: 'warn'
+        },
+        {
+          params: ['Paid'],
+          state: 'success'
+        },
+        {
+          params: ['Declined'],
+          state: 'error'
         },
       ]
   },
   {
-    name: 'Maximiliano Montgomery',
+    name: 'Maxamiliano Montgomery',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
@@ -161,126 +197,21 @@ const PAYMENT_LIST = [
     additions:
       [
         {
-          params: ['draft'],
+          params: ['Submitted'],
           state: 'warn'
         },
         {
-          params: ['submitted'],
-          state: 'warn'
-        },
-      ]
-  },
-  {
-    name: 'Meredith palm',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due on Feb 2,2020',
-    status: 'success',
-    additions:
-      [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
-        {
-          params: ['submitted'],
+          params: ['Paid'],
           state: 'success'
         },
-      ]
-  },
-  {
-    name: 'Meredith palm',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due on Feb 2,2020',
-    status: 'normal',
-    additions:
-      [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
-        {
-          params: ['submitted'],
-          state: 'normal'
-        },
-      ]
-  },
-  {
-    name: 'Maximiliano Montgomery',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Stripe Funding on tuesday 2,2020',
-    status: 'success',
-    additions:
-      [
-        {
-          params: ['Paid - Sprite - ACH'],
-          state: 'success'
-        },
-        {
-          params: ['Actual - Test - Several'],
-          state: 'warn'
-        },
-        {
-          params: ['submitted'],
-          state: 'success'
-        },
-        {
-          params: ['Viewed'],
-          state: 'warn'
-        },
-      ]
-  },
-  {
-    name: 'Gabriel Susan',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due - Dec 30,2022',
-    status: 'error',
-    additions:
-      [
         {
           params: ['Declined'],
           state: 'error'
         },
-        {
-          params: ['Submitted'],
-          state: 'success'
-        },
-      ]
-  },
-
-  {
-    name: 'Meredith palm',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due on Feb 2,2020',
-    status: 'normal',
-    additions:
-      [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
-        {
-          params: ['submitted'],
-          state: 'normal'
-        },
       ]
   },
   {
-    name: 'Maximiliano Montgomery',
+    name: 'Maxamiliano Montgomery',
     price: '123.45',
     id: '2056',
     date: '2/28/2022',
@@ -290,101 +221,29 @@ const PAYMENT_LIST = [
     additions:
       [
         {
-          params: ['draft'],
-          state: 'warn'
-        },
-        {
           params: ['submitted'],
           state: 'warn'
-        },
-      ]
-  },
-  {
-    name: 'Meredith palm',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due on Feb 2,2020',
-    status: 'success',
-    additions:
-      [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
-        {
-          params: ['submitted'],
-          state: 'success'
-        },
-      ]
-  },
-  {
-    name: 'Meredith palm',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due on Feb 2,2020',
-    status: 'normal',
-    additions:
-      [
-        {
-          params: ['draft'],
-          state: 'normal'
-        },
-        {
-          params: ['submitted'],
-          state: 'normal'
-        },
-      ]
-  },
-  {
-    name: 'Maximiliano Montgomery',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Stripe Funding on tuesday 2,2020',
-    status: 'success',
-    additions:
-      [
-        {
-          params: ['Paid - Sprite - ACH'],
-          state: 'success'
-        },
-        {
-          params: ['Actual - Test - Several'],
-          state: 'warn'
-        },
-        {
-          params: ['submitted'],
-          state: 'success'
-        },
-        {
-          params: ['Viewed'],
-          state: 'warn'
-        },
-      ]
-  },
-  {
-    name: 'Gabriel Susan',
-    price: '123.45',
-    id: '2056',
-    date: '2/28/2022',
-    sub: 'Whole Home Speaker Install',
-    due: 'Due - Dec 30,2022',
-    status: 'error',
-    additions:
-      [
-        {
-          params: ['Declined'],
-          state: 'error'
         },
         {
           params: ['Submitted'],
-          state: 'success'
+          state: 'warn'
         },
+      ]
+  },
+  {
+    name: 'Maxamiliano Montgomery',
+    price: '123.45',
+    id: '2056',
+    date: '2/28/2022',
+    sub: 'Whole Home Speaker Install',
+    due: 'Stripe Funding on Tuesday',
+    status: 'success',
+    additions:
+      [
+        {
+          params: ['Paid • Stripe - ACH'],
+          state: 'success'
+        }
       ]
   },
 ]

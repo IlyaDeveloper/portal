@@ -111,3 +111,39 @@
     }
   }
 }
+
+.__dropdown {
+
+  hr {
+    margin: 0 0 0 auto;
+    padding: 0;
+    max-width: calc(100% - (#{$contentGutter + rem(12*2)}));
+
+    background-color: #E8E9ED;
+  }
+}
+
+.__dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+
+  width: 100%;
+  min-height: rem(38);
+  padding: 0 $contentGutter;
+
+  font-family: $font-family-primary !important;
+  font-size: rem(12);
+  border: unset;
+  background: unset;
+
+  &:before {
+    font-family: $icon-font-family;
+  }
+
+  @include only-mouse {
+    &:hover {
+      background: #F7F7F9;
+    }
+  }
+}

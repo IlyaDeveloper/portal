@@ -6,6 +6,7 @@ import {PaymentCardComponent} from "@modules/payments/components/payment-card/pa
 import {RouterModule} from "@angular/router";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {UiModule} from "@ui/ui.module";
+import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
 
 const COMPONENTS = [
   PaymentCardComponent,
@@ -21,6 +22,7 @@ const COMPONENTS = [
     RouterModule,
     FlexLayoutModule,
     PaymentsRoutingModule,
+    NgbDropdownModule,
     UiModule
   ]
 })

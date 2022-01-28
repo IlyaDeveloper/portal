@@ -1,26 +1,27 @@
 <div class="__area"
      fxLayout="row"
-     fxLayoutAlign="center"
-     (click)="openDropdown()">
-
-  <button class="__btn"
-          type="button"
-          [class.--isToggle]="isToggleDropdown">
-    <i [ngClass]="{'pri-chevron-down': !isToggleDropdown, 'pri-chevron-up': isToggleDropdown}">
-    </i>
-  </button>
-
-  <div class="__item" fxLayout="row nowrap" fxLayoutAlign="center start">
-     <span class="__status" [ngClass]="{'--warn':v1 === 'warn',
+     fxLayoutAlign="start center"
+     ngbDropdown
+     ngbDropdownToggle
+     [class.--disabled]="disabledDropdown">
+  <div class="__item">
+     <span class="__status"
+           [ngClass]="{'--warn':v1 === 'warn',
                  '--error': v1 === 'error', '--success': v1 === 'success'}"></span>
     <span class="">{{v2}}</span>
   </div>
 
-  <div class="__dropdown" *ngIf="isToggleDropdown">
-    <div class="__dropdown-item" *ngFor="let item of additions" (click)="getData(item.state, item.params)">
+  <div class="__dropdown" ngbDropdownMenu>
+    <div class="__dropdown-wrap">
+      <div class="__dropdown-item"
+           *ngFor="let item of additions; let i = index;"
+           [class.--check-item]="checkItem"
+           [attr.dataItem]="i"
+           (click)="onClick(item.state, item.params, $event);">
       <span class="__status" [ngClass]="{'--warn': item.state === 'warn'
        ,'--error': item.state === 'error' ,'--success': item.state === 'success'}"></span>
-      <div class="">{{item.params}}</div>
+        <div class="">{{item.params}}</div>
+      </div>
     </div>
   </div>
 </div>

@@ -8,7 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class StatusComponent implements OnInit {
   @Input() additions: any = [];
 
-  isToggleDropdown: boolean = false;
+  disabledDropdown: boolean = false;
+  checkItem: any = [];
 
   v1: string = '';
   v2: string = '';
@@ -17,15 +18,26 @@ export class StatusComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getData(this.additions[0].state, this.additions[0].params);
-  }
+    setTimeout(() => {
+      this.getData(this.additions[0].state, this.additions[0].params);
+    }, 0);
 
-  openDropdown(): void {
-    this.isToggleDropdown = !this.isToggleDropdown
+    (this.additions.length > 1)
+      ? (this.disabledDropdown = false)
+      : (this.disabledDropdown = true)
   }
 
   getData(val: string, val2: string) {
     this.v1 = val;
     this.v2 = val2;
+  }
+
+  onClick(val: string, val2: string, event?: any) {
+    this.getData(val, val2);
+
+    console.log('event.target', event.target);
+
+   let index = event.target.getAttribute('dataItem');
+    console.log('checkItem', index);
   }
 }

@@ -26,9 +26,21 @@
     <prt-status [additions]="additions"></prt-status>
   </div>
 
-  <button class="__btn-more" type="button"
-          gdArea="4 / 1 span / 1"
-          gdGridAlign="end center">
-    <i class="bi bi-three-dots-vertical"></i>
-  </button>
+  <div class=""
+       gdArea="4 / 1 span / 1"
+       gdGridAlign="end center"
+       ngbDropdown>
+    <button class="__btn-more" type="button" ngbDropdownToggle>
+      <i class="pri-ellipsis-v"></i>
+    </button>
+
+    <div class="__dropdown" ngbDropdownMenu>
+      <button class="__dropdown-btn pri-edit" type="button">Edit</button>
+      <button class="__dropdown-btn pri-paper-plane" type="button">Submit</button>
+      <button class="__dropdown-btn pri-usd-circle" type="button">Receive Payment</button>
+      <hr>
+      <button class="__dropdown-btn pri-trash"> Archive</button>
+    </div>
+  </div>
+
 </article>

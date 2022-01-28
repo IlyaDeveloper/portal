@@ -113,7 +113,7 @@ $tertiary-c-lighten: var(--cl-tertiary-lighten);
 $light-c: var(--cl-light);
 $dark-c: var(--cl-dark);
 
-$back-color: var(--body-color, $light-c);
+$back-color: var(--body-color, $tertiary-c-lighten);
 
 $error-c: var(--cl-error);
 $warning-c: var(--cl-warning);
@@ -158,7 +158,7 @@ $pti-check: "\e906";
 $pti-chevron-down: "\e907";
 $pti-chevron-up: "\e908";
 $pti-close: "\e909";
-$pti-edit-2: "\e90a";
+$pti-edit: "\e90a";
 $pti-ellipsis-h-alt: "\e90b";
 $pti-ellipsis-h: "\e90c";
 $pti-ellipsis-v-alt: "\e90d";
@@ -187,7 +187,7 @@ $icons-font-map: (
   chevron-down: $pti-chevron-down,
   chevron-up: $pti-chevron-up,
   close: $pti-close,
-  edit-2: $pti-edit-2,
+  edit: $pti-edit,
   ellipsis-h-alt: $pti-ellipsis-h-alt,
   ellipsis-h: $pti-ellipsis-h,
   ellipsis-v-alt: $pti-ellipsis-v-alt,
@@ -239,3 +239,17 @@ $z-index: (
   header: 100,
   modal: 1000
 ) !default;
+
+//* ngBootsrap
+$dropdown-padding-x: 0 !default;
+$dropdown-padding-y: rem(8) !default;
+
+$dropdown-border-color: rgba(0, 0, 0, 0.04);
+$dropdown-border-radius: $elemRadius;
+$dropdown-border-width: rem(1);
+
+$dropdown-bg: $light-c;
+$dropdown-color: #595A5E;
+
+$dropdown-box-shadow: $sh-card-second;
+$enable-caret: false;

@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NativeRefService} from "@core/refs/native-ref.service";
 import {UiModule} from "@ui/ui.module";
 import {LayoutRootModule} from "@modules/layout-root/layout-root.module";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {LayoutRootModule} from "@modules/layout-root/layout-root.module";
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     FlexLayoutModule,
     AppRoutingModule,
     LayoutRootModule,

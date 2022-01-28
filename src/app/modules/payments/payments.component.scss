@@ -4,14 +4,20 @@
 :host {
   display: grid;
   margin: 0 $containerOffset;
-  padding: $contentGutter 0;
+  padding: 0 0;
+
+  height: 100%;
 
   overflow: hidden;
 
 }
 
 .__list {
-height: 100%;
+  grid-auto-rows: max-content;
+
+  //height: 100%;
+
+  padding-bottom: $contentGutter;
 
   overflow: auto;
 }

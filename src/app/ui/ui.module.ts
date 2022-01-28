@@ -7,6 +7,8 @@ import {StatusComponent} from './components/status/status.component';
 import {SearchComponent} from './components/search/search.component';
 import {FormsModule} from "@angular/forms";
 import {CursorComponent} from './components/cursor/cursor.component';
+import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 const COMPONENTS = [
   LogoComponent,
@@ -22,7 +24,9 @@ const COMPONENTS = [
   exports: [...COMPONENTS],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
+    NgbDropdownModule
   ]
 })
 export class UiModule {
