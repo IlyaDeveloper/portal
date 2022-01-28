@@ -1,0 +1,37 @@
+<header class="__wrap container">
+  <article class="__top" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
+    <h1 class="__title" fxFlex="1 1">Payment Requests</h1>
+
+    <div class="__search" fxFlex="1 1" fxLayoutAlign="end" >
+      <prt-search fxFlex="1 1"></prt-search>
+    </div>
+  </article>
+
+  <article>
+    <nav class="__tabs" fxLayout="row" >
+      <button class="__tab --active">All</button>
+      <button class="__tab">Outstanding</button>
+      <button class="__tab">Paid</button>
+      <button class="__tab">More</button>
+    </nav>
+
+    <div class="__detail" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
+      <div fxLayout="row"  fxLayoutGap="0.5rem">
+        <prt-tag *ngFor="let statusItem of statusList">{{statusItem}}</prt-tag>
+      </div>
+
+      <div fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
+
+        <mark class="__sort-count">1,880 Proposals</mark>
+
+        <button class="__sort-btn" (click)="sorted()">
+          <i class="bi"
+             [ngClass]="{'bi-filter-left': filteredType ==='up',
+             'bi-filter-right': filteredType ==='down'}">
+          </i>
+          <span> Sort By</span>
+        </button>
+      </div>
+    </div>
+  </article>
+</header>

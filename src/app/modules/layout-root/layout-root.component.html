@@ -1,9 +1,17 @@
-<aside class="__nav" gdArea="2 span / 1 ">
+<aside class="__nav">
   <prt-aside-menu></prt-aside-menu>
 </aside>
 
-<main class="__content" fxLayout="column" fxFlex="1 1" gdArea="1 span / 2 ">
-  <router-outlet></router-outlet>
+<main class="__content" fxLayout="column" fxFlex="1 1">
+  <prt-header></prt-header>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
 </main>
+
+<aside class="__right">
+  <prt-payment-aside></prt-payment-aside>
+</aside>
+
 
 <prt-footer gdArea="1 span / 2 "></prt-footer>

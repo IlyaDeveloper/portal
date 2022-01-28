@@ -1,10 +1,10 @@
 :root {
   //* root sizes
   --container-limit: #{$containerLimit};
-  --container-gutter: #{$contentGutterX2};
+  --container-gutter: #{rem(20)};
 
   //--header-hgt: #{rem(78)};
-  --footer-height: #{rem(78)};
+  --footer-height: #{rem(38)};
 
   //* root themes
   @include generate-themes($themes-map);

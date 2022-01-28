@@ -1,14 +1,15 @@
-<footer class="__foot" fxLayout="row nowrap" fxLayoutGap="2rem">
-  <div class="">Choose how Portal looks to you.</div>
+<footer class="__foot" fxLayout="row nowrap" fxLayoutGap="1rem">
+  <div>Choose how Portal looks to you.</div>
 
-  <div class="__themes" gdAuto="column" gdGap="1rem">
-    <button class="__item" (click)="applyTheme('default')"></button>
-    <button class="__item" (click)="applyTheme('ocean')"></button>
-    <button class="__item" (click)="applyTheme('github')"></button>
+  <div class="__themes" gdAuto="column" gdGap="0.5rem">
+    <button class="__item" [class.--active]="isApplyTheme === 'default'" (click)="applyTheme('default')"></button>
+    <button class="__item" [class.--active]="isApplyTheme === 'ocean'" (click)="applyTheme('ocean')"></button>
+    <button class="__item" [class.--active]="isApplyTheme === 'github'" (click)="applyTheme('github')"></button>
   </div>
 
   <div>
-    Create : Pashchuk Ilya
-    <a class="__link" href=" https://clck.ru/ajFSB" target="_blank"></a>
+    by <a class="__link" href="https://justtwic.art" target="_blank">justtwic</a>
   </div>
 </footer>
+
+<button class="__btn" (click)="showFooter()"></button>

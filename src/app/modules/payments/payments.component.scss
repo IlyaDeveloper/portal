@@ -1,19 +1,6 @@
 @import "core";
 
 :host {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr minmax(0, rem(650));
-
-  max-height: calc(100vh - var(--footer-height));
+  //max-height: calc(100vh - var(--footer-height));
   overflow: hidden;
-}
-
-.__content {
-  display: grid;
-}
-
-.__right {
-  width: 100%;
-  max-width: rem(550);
 }

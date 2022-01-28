@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {NativeRefService} from "@core/refs/native-ref.service";
 
 @Component({
@@ -8,7 +8,14 @@ import {NativeRefService} from "@core/refs/native-ref.service";
 })
 export class FooterComponent implements OnInit {
 
+  isShow: boolean = false;
+  isApplyTheme: string = 'default'
+
   constructor(private native: NativeRefService) {
+  }
+
+  @HostBinding('class.--open') get isShowFooter(): boolean {
+    return this.isShow;
   }
 
   ngOnInit(): void {
@@ -16,5 +23,11 @@ export class FooterComponent implements OnInit {
 
   applyTheme(name: string) {
     this.native.html.setAttribute('theme', name);
+    this.isApplyTheme = name;
+
+  }
+
+  showFooter() {
+    this.isShow = !this.isShow;
   }
 }

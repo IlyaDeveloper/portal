@@ -1,51 +1,114 @@
 @import "core";
 
-
 :host {
-  align-self: end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: z-index(start);
+
+  &:not(.--open) {
+    --footer-height: 0 !important;
+    --footer-spacer: 0;
+    --footer-btn-transform: 0;
+
+    right: auto;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+.__btn {
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: rem(100);
+  padding: dv($contentGutter, 5);
+
+  border-radius: rem(8) rem(8) 0 0;
+  border: unset;
+  background: $secondary-c;
+
+  transform: translate(-50%, -97%);
+
+  &:before {
+    position: relative;
+
+    @include pseudo-icon($pti-chevron-up, 10);
+    color: $light-c;
+
+    transform-origin: center;
+    transform: rotate(var(--footer-btn-transform, 180deg));
+    transition-property: transform $transition-default;
+  }
+
+  @include only-mouse {
+    &:hover {
+      background: $secondary-c-dark;
+    }
+  }
 }
 
 .__foot {
   align-items: center;
   justify-content: left;
-  padding: $contentGutter - rem(2);
+
+  padding: var(--footer-spacer, dv($contentGutter, 2) $contentGutterX2);
 
   width: 100%;
   height: var(--footer-height);
+  max-height: var(--footer-height);
 
-  font-size: rem(20);
+  font-size: rem(14);
   white-space: nowrap;
   color: $light-c;
 
   background: $primary-c;
+  overflow: hidden;
+
+  transition: max-height $transition-default;
 }
 
 .__themes {
-  margin-right: auto!important;
+  margin-right: auto !important;
 }
 
 .__item {
-  width: rem(40);
-  height: rem(40);
+  width: rem(20);
+  height: rem(20);
 
   border-radius: 50%;
   border: rem(3) solid $light-c;
 
-  &:nth-of-type(1){
+  transition: $transition-default;
+
+  &.--active {
+    border-color: #99c8ff;
+    transform: scale(1.2);
+  }
+
+  &:nth-of-type(1) {
     background-color: #DA5726;
   }
-  &:nth-of-type(2){
 
-    background-color: #3673c9!important;
+  &:nth-of-type(2) {
+    background-color: #3673c9 !important;
   }
-  &:nth-of-type(3){
 
+  &:nth-of-type(3) {
     background-color: #22272e !important;
   }
 
-  @include only-mouse(){
-    &:hover{
-      background-color: #99c8ff;
+  @include only-mouse() {
+    &:hover {
+      transform: scale(1.2);
     }
   }
 }

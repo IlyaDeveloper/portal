@@ -1,0 +1,67 @@
+@import "core";
+
+:host {
+  position: relative;
+
+  display: flex;
+  flex-flow: column;
+
+  height: 100%;
+
+  overflow: auto;
+}
+
+.__head {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: $z-index-step;
+
+  padding: $contentGutter 0;
+
+  font-size: rem(20);
+  font-weight: 600;
+  color: $primary-c-light;
+
+  background: $back-color;
+  border-bottom: rem(1) solid $border-color;
+  overflow: hidden;
+}
+
+.__item {
+  padding: $contentGutterX2 0;
+
+  &:not(:last-of-type) {
+    border-bottom: rem(1) solid $border-color;
+  }
+}
+
+.__name {
+  display: inline-flex;
+
+  margin: 0 rem(8) rem(10) 0;
+
+  font-size: rem(16);
+  font-weight: 500;
+  color: $primary-c;
+
+  opacity: .8;
+}
+
+.__date {
+  font-size: rem(16);
+  font-weight: 400;
+  color: $primary-c-light;
+  opacity: .5;
+}
+
+.__info {
+  margin: 0;
+  font-size: rem(12);
+  font-weight: rem(0.5);
+  color: $primary-c-light;
+}
+
+.__mar {
+  color: $secondary-c;
+}

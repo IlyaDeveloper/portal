@@ -7,10 +7,14 @@ import {UiModule} from "@ui/ui.module";
 import {LayoutRootComponent} from "@modules/layout-root/layout-root.component";
 import {AsideMenuComponent} from "@modules/layout-root/components/aside-menu/aside-menu.component";
 import {FooterComponent} from './components/footer/footer.component';
+import {HeaderComponent} from "@modules/layout-root/components/header/header.component";
+import {PaymentAsideComponent} from "@modules/layout-root/components/payment-aside/payment-aside.component";
 
 const COMPONENTS = [
   LayoutRootComponent,
-  AsideMenuComponent
+  AsideMenuComponent,
+  HeaderComponent,
+  PaymentAsideComponent,
 ];
 
 @NgModule({

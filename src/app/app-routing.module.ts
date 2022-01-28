@@ -14,19 +14,15 @@ const routes: Routes = [
       },
       {
         path: 'catalog',
-        loadChildren: () => import('./modules/payments/payments.module').then(m => m.PaymentsModule)
+        loadChildren: () => import('./modules/catalog/catalog.module').then(m => m.CatalogModule)
       },
       {
         path: 'proposals',
-        loadChildren: () => import('./modules/payments/payments.module').then(m => m.PaymentsModule)
+        loadChildren: () => import('./modules/proposals/proposals.module').then(m => m.ProposalsModule)
       },
       {
-        path: 'people',
-        loadChildren: () => import('./modules/payments/payments.module').then(m => m.PaymentsModule)
-      },
-      {
-        path: 'payments',
-        loadChildren: () => import('./modules/payments/payments.module').then(m => m.PaymentsModule)
+        path: 'peoples',
+        loadChildren: () => import('./modules/peoples/peoples.module').then(m => m.PeoplesModule)
       },
       {
         path: 'payments',
@@ -34,7 +30,7 @@ const routes: Routes = [
       },
       {
         path: 'orders',
-        loadChildren: () => import('./modules/payments/payments.module').then(m => m.PaymentsModule)
+        loadChildren: () => import('./modules/orders/orders.module').then(m => m.OrdersModule)
       },
       {
         path: '',

@@ -49,17 +49,18 @@ $themes-map: (
     primary: #262626,
     primary-light: #747474,
     primary-lighten: #939393,
+    secondary-light:#ff8659,
     secondary: #DA5726,
     secondary-dark: #a73605,
-    tertiary: #A0A2A7,
-    tertiary-light: #EAEBEF,
+    tertiary: #8E9197,
+    tertiary-light: #E4E6EB,
     light: #F5F5F5,
     dark: #000000,
     base: var(--cl-primary),
     border: var(--cl-tertiary-light),
-    error: #CE3A20,
-    warning: #F9D24B,
-    success: #61AA6C
+    error: #D50F06,
+    warning: #FFD213,
+    success: #42AD65
   ),
   ocean:(
     primary: #3673c9,
@@ -99,7 +100,9 @@ $primary-c: var(--cl-primary);
 $primary-c-light: var(--cl-primary-light);
 $primary-c-lighten: var(--cl-primary-lighten);
 $secondary-c: var(--cl-secondary);
+$secondary-c-dark: var(--cl-secondary-dark);
 $secondary-c-light: var(--cl-secondary-light);
+
 $tertiary-c: var(--cl-tertiary);
 $tertiary-c-light: var(--cl-tertiary-light);
 
@@ -166,7 +169,6 @@ $pti-sort-amount-down: "\e917";
 $pti-sort-amount-up: "\e918";
 $pti-trash: "\e919";
 $pti-usd-circle: "\e91a";
-
 
 $icons-font-map: (
   users-group: $pti-users-group,
