@@ -9,8 +9,18 @@
 </main>
 
 <aside class="__right" gdGap="2.5rem" gdGap.lt-lg="1.5rem">
-  <prt-instantly-card></prt-instantly-card>
-  <prt-payment-aside></prt-payment-aside>
+  <ng-template [ngIf]="isCatalogPage">
+    <div class="__banner">
+      <a href="">
+        <img src="assets/img/aside_right.png" alt="">
+      </a>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="isOthersPages">
+    <prt-instantly-card></prt-instantly-card>
+    <prt-payment-aside></prt-payment-aside>
+  </ng-template>
 </aside>
 
-<prt-footer gdArea="1 span / 2 "></prt-footer>
+<prt-footer gdArea="1 span / 2"></prt-footer>

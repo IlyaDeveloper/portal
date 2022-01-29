@@ -44,6 +44,12 @@
     color: $primary-c;
   }
 
+  @include insert-icons{
+    margin-left: rem(7);
+
+    font-size: rem(10);
+  }
+
   @include only-mouse {
     &:hover {
       --header-btn-bottom-line: #{rem(-2)};
@@ -99,6 +105,39 @@
       &:active {
         transform: scale(1.1);
       }
+    }
+  }
+}
+
+.__dropdown {
+  position: relative;
+}
+
+.__dropdown-menu {
+  top: 100%;
+  right: 0;
+}
+
+.__dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+
+  width: 100%;
+  min-height: rem(38);
+
+  padding: 0 rem(10);
+
+  font-size: rem(13);
+  font-weight: 600;
+  letter-spacing: rem(-0.2);
+
+  border: unset;
+  background: unset;
+
+  @include only-mouse {
+    &:hover {
+      background: #F7F7F9;
     }
   }
 }

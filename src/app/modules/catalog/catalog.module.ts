@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { CatalogRoutingModule } from './catalog-routing.module';
 import { CatalogComponent } from './catalog.component';
-
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
-    CatalogComponent
+    CatalogComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     CatalogRoutingModule
   ]
 })

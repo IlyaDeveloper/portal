@@ -22,10 +22,10 @@ $aside-width: var(--aside-right-width, rem(254));
   padding: rem(20);
 
   overflow: hidden;
+}
 
-  span {
-
-  }
+.__banner {
+  padding-top: rem(148);
 }
 
 @include min-wide(notebook) {

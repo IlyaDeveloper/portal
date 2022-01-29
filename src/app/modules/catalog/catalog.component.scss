@@ -1,1 +1,9 @@
 @import "core";
+
+:host {
+  @extend %main-host
+}
+
+.__content {
+  @extend %main-list;
+}

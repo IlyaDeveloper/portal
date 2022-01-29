@@ -1,0 +1,51 @@
+@import "core";
+
+:host {
+
+}
+
+.__card {
+  @extend %card;
+
+  border: $border-pop-window;
+
+  transition: box-shadow $transition-default;
+
+  @include only-mouse {
+    &:hover {
+      --product-card-foot-bg: #{$secondary-c};
+
+      box-shadow: $sh-card-active;
+    }
+  }
+}
+
+.__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: rem(250);
+
+  padding: $contentGutter;
+
+  img {
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.__foot {
+  padding: $contentGutterX2 $contentGutter;
+
+  font-size: rem(16);
+  letter-spacing: rem(-0.31);
+  color: $light-c;
+
+  border-radius: 0 0 $elemRadius $elemRadius;
+  background: var(--product-card-foot-bg, $primary-c);
+
+  transition: background-color $transition-default;
+}

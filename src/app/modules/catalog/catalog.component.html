@@ -1,1 +1,9 @@
-<p>catalog works!</p>
+<section class="__content container" gdGap="1.5rem"
+         gdColumns="minmax(10rem, 1fr) minmax(10rem, 1fr) minmax(10rem, 1fr)">
+  <prt-product-card
+    *ngFor="let item of list"
+    [name]="item.name"
+    [image]="item.image"
+    [imageDescription]="item.desc">
+  </prt-product-card>
+</section>

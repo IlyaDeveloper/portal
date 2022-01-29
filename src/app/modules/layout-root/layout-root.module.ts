@@ -9,25 +9,27 @@ import {AsideMenuComponent} from "@modules/layout-root/components/aside-menu/asi
 import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from "@modules/layout-root/components/header/header.component";
 import {PaymentAsideComponent} from "@modules/layout-root/components/payment-aside/payment-aside.component";
-import { InstantlyCardComponent } from './components/instantly-card/instantly-card.component';
+import {InstantlyCardComponent} from './components/instantly-card/instantly-card.component';
+import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
 
 const COMPONENTS = [
   LayoutRootComponent,
   AsideMenuComponent,
   HeaderComponent,
   PaymentAsideComponent,
+  FooterComponent,
+  InstantlyCardComponent
 ];
 
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    FooterComponent,
-    InstantlyCardComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FlexLayoutModule,
+    NgbDropdownModule,
     UiModule
   ]
 })

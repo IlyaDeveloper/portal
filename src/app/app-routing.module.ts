@@ -10,7 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./modules/payments/payments.module').then(m => m.PaymentsModule)
+        pathMatch: 'full',
+        redirectTo: 'catalog',
       },
       {
         path: 'catalog',

@@ -3,7 +3,7 @@
     <h1 class="__title" fxFlex="1 1">{{caption$  | async}}</h1>
 
     <div class="__search" fxFlex="1 1" fxLayoutAlign="end">
-      <prt-search fxFlex="1 1" placeholder="{{(caption$  | async )}}" ></prt-search>
+      <prt-search fxFlex="1 1" placeholder="{{(caption$  | async )}}"></prt-search>
     </div>
   </article>
 
@@ -12,7 +12,20 @@
       <button class="__tab --active">All</button>
       <button class="__tab">Outstanding</button>
       <button class="__tab">Paid</button>
-      <button class="__tab">More</button>
+
+      <div class="__dropdown" ngbDropdown>
+        <button class="__tab" type="button" ngbDropdownToggle>
+          <span>More</span>
+          <i class="pri-chevron-down"></i>
+        </button>
+
+        <div class="__dropdown-menu" ngbDropdownMenu>
+          <button class="__dropdown-btn" type="button">Payments Received</button>
+          <button class="__dropdown-btn" type="button">Stripe Funding</button>
+          <button class="__dropdown-btn" type="button">Archived</button>
+        </div>
+      </div>
+
     </nav>
 
     <div class="__detail" fxLayout="row nowrap" fxLayoutAlign="space-between center" fxLayoutGap="1.5rem">
